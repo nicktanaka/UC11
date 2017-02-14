@@ -7,7 +7,7 @@
  */
 function oddFilter(a) {
     var result = [];
-    for (i = 0; i < a.length; ++i) {
+    for (i = 0; i < a.length - 1; ++i) {
         if (a[i] % 2 != 0) {
             result.push(a[i]);
         }
@@ -25,7 +25,7 @@ function listTriangularNumbers(n) {
     var array = [];
     for (i = 1; i <= n; ++i) {
         num = i;
-        for (j = i; j <= 1; --j) {
+        for (j = i; j >= 1; --j) {
             num = num + j;
         }
         array.push(num);
@@ -60,7 +60,7 @@ function multTable(row, col) {
  * @returns {number}
  */
 function factorial(n) {
-    var result = 1;
+    var result = 0;
     for (var i = n; i > 1; i--) {
         result = result * i;
     }
@@ -89,7 +89,8 @@ function sort(a) {
     for (var i = 0; i < result.length; ++i) {
         var j = result[i];
         var k;
-        for (k = i - 1;k >= 0 && (j < result[i]); --k) {
+        for (k = i - 1;
+            (k >= 0) && (j < result[k]); k--) {
             result[k - 1] = result[k];
         }
         result[k - 1] = j;
