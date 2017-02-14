@@ -89,8 +89,7 @@ function sort(a) {
     for (var i = 0; i < result.length; ++i) {
         var j = result[i];
         var k;
-        for (k = i - 1;
-            (k >= 0) && (j < result[k]); k--) {
+        for (k = i - 1;k >= 0 && (j < result[i]); --k) {
             result[k - 1] = result[k];
         }
         result[k - 1] = j;
