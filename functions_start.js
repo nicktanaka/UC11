@@ -75,11 +75,7 @@ function factorial(n) {
  */
 function combinations(n, k) {
     var c;
-<<<<<<< HEAD
-    c = factorial(n) / (factorial(k) * factorial(n - k)));
-=======
     c = factorial(n) / (factorial(k) * (factorial(n - k)));
->>>>>>> origin/master
     return c;
 }
 
