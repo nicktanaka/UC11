@@ -7,7 +7,7 @@
  */
 function oddFilter(a) {
     var result = [];
-    for (i = 0; i < a.length - 1; ++i) {
+    for (i = 0; i < a.length; ++i) {
         if (a[i] % 2 != 0) {
             result.push(a[i]);
         }
@@ -60,7 +60,7 @@ function multTable(row, col) {
  * @returns {number}
  */
 function factorial(n) {
-    var result = 0;
+    var result = 1;
     for (var i = n; i > 1; i--) {
         result = result * i;
     }
@@ -75,7 +75,11 @@ function factorial(n) {
  */
 function combinations(n, k) {
     var c;
+<<<<<<< HEAD
     c = factorial(n) / (factorial(k) * factorial(n - k)));
+=======
+    c = factorial(n) / (factorial(k) * (factorial(n - k)));
+>>>>>>> origin/master
     return c;
 }
 
